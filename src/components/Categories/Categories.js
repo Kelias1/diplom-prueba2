@@ -1,10 +1,10 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
 import { activeCategory } from '../../actions/categoriesAction';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 var qs = require('qs');
 
 
@@ -12,7 +12,7 @@ export default function Categories(props) {
   const { onChange } = props;
   const categoriesState = useSelector((state) => state.categoriesReducer);
   const dispatch = useDispatch();
-  const history = useHistory();
+  const history = useNavigate();
   const parsed = qs.parse(history.location.search.substr(1));
   const searchCategory = parsed.category !== undefined ? Number(parsed.category) : 0;
   const searchValue = parsed.query !== undefined ? parsed.query : '';

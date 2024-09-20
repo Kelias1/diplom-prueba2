@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/.github.io/diplom-prueba2/static/css/main.ac0b5f02.css",
+    "main.js": "/.github.io/diplom-prueba2/static/js/main.200f6a69.js",
+    "static/js/488.7c4883b2.chunk.js": "/.github.io/diplom-prueba2/static/js/488.7c4883b2.chunk.js",
+    "static/media/banner.jpg": "/.github.io/diplom-prueba2/static/media/banner.5fd2c60d58a8686daee0.jpg",
+    "static/media/footer-sprite.png": "/.github.io/diplom-prueba2/static/media/footer-sprite.b3d5697aeb76ce9f8002.png",
+    "index.html": "/.github.io/diplom-prueba2/index.html",
+    "main.ac0b5f02.css.map": "/.github.io/diplom-prueba2/static/css/main.ac0b5f02.css.map",
+    "main.200f6a69.js.map": "/.github.io/diplom-prueba2/static/js/main.200f6a69.js.map",
+    "488.7c4883b2.chunk.js.map": "/.github.io/diplom-prueba2/static/js/488.7c4883b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac0b5f02.css",
+    "static/js/main.200f6a69.js"
+  ]
+}

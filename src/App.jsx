@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import store from './store';
 import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
@@ -24,7 +24,7 @@ function App() {
           <div className="row">
             <div className="col">
               <Banner />
-              <Switch>
+              <Routes>
                 <Route path="/catalog/:id" component={Product} />
                 <Route path="/catalog" component={Catalog} />
                 <Route path="/about" component={About} />
@@ -32,7 +32,7 @@ function App() {
                 <Route path="/cart" component={CartOrder} />
                 <Route path="/" exact component={Home} />
                 <Route component={Page404} />
-              </Switch>
+              </Routes>
             </div>
           </div>
         </main>

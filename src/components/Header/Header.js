@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import classnames from 'classnames';
 import logo from '../../img/header-logo.png';
 import { activeCategory } from '../../actions/categoriesAction';
@@ -16,7 +16,7 @@ export default function Header() {
   const dispatch = useDispatch();
   const [searchVisible, setSearchVisible] = useState(true);
   const [form, setForm] = useState(DEFAULT_FORM_VALUE);
-  const history = useHistory();
+  const navigate = useNavigate();
   
   const searchVisibleClass = classnames({
     'form-inline': true,
@@ -29,7 +29,7 @@ export default function Header() {
       dispatch(activeCategory(0));
       dispatch(searchTextStatus(form.search, true));
       setForm(DEFAULT_FORM_VALUE);
-      history.push({
+      navigate.push({
         pathname: `/catalog`,
         search: `?query=${form.search}&category=${categoriesState.activeCategory}`
       })

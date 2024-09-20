@@ -1,14 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { searchFieldChange, searchTextStatus } from '../../actions/searchAction';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 var qs = require('qs');
 
 
 export default function SearchForm() {
   const categoriesState = useSelector((state) => state.categoriesReducer);
   const dispatch = useDispatch();
-  const history = useHistory();
+  const history = useNavigate();
   const parsed = qs.parse(history.location.search.substr(1))
   const searchValue = parsed.query !== undefined ? parsed.query : '';
 

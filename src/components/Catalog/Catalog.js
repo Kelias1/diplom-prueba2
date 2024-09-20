@@ -9,7 +9,7 @@ import List from '../List/List';
 import { catalogRequest } from '../../actions/catalogAction';
 import { catalogAndCategoriesRequest } from '../../actions/categoriesAction';
 import { searchTextStatus } from '../../actions/searchAction';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 var qs = require('qs');
 
 export default function Catalog(props) {
@@ -20,7 +20,7 @@ export default function Catalog(props) {
   const searchState = useSelector((state) => state.searchReducer);
   const searchText = searchSupport ? searchState.search : '';
   const dispatch = useDispatch();
-  const history = useHistory();
+  const history = useNavigate();
   const parsed = qs.parse(history.location.search.substr(1));
       
   async function getCatalog(categoryId, offset = 0) {

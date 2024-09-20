@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import cn from 'classnames';
 import Preloader from '../Preloader/Preloader';
@@ -17,7 +17,7 @@ import { orderInit } from '../../actions/orderAction';
 export default function Product(props) {
   console.log(props)
   const { match } = props;
-  const history = useHistory();
+  const history = useNavigate();
   const productState = useSelector((state) => state.productReducer);
   const dispatch = useDispatch();
   const id = parseInt(match.params.id, 10);

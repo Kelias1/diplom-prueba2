@@ -4,7 +4,7 @@ import {
     applyMiddleware,
     compose,
   } from 'redux';
-  import thunk from 'redux-thunk';
+  import { thunk } from 'redux-thunk';
   import topSalesReducer from '../reducers/topSalesReducer';
   import categoriesReducer from '../reducers/categoriesReducer'
   import catalogReducer from '../reducers/catalogReducer';
